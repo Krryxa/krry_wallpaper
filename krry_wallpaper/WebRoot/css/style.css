@@ -1,0 +1,143 @@
+
+.header{
+	position: fixed;
+    z-index: 99999;
+    height: 50px;
+    top:0;
+    width: 100%;
+    line-height: 50px;
+    font-size: 16px;
+    background-color: #fff;
+    opacity: 0.77;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=77);
+    filter: alpha(opacity=77);
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+}
+.header .h_left{
+	float: left;
+	margin-left: 29px;
+	font-size: 24px;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #f22), color-stop(0.15, #d42004), color-stop(0.3, #fbcd66), color-stop(0.45, #f3d503), color-stop(0.6, #ff5f22), color-stop(0.85, #ff2), color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.header .h_right{
+	float:right;
+
+}
+.header .h_right li,.h_right li a{
+	float: left;
+    width: 100px;
+    cursor:url("../images/link.cur"),pointer;
+    text-align: center;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+}
+.header .h_right .h_r_no:hover{
+	color:#ef4345;
+}
+.header .h_right li a:hover{
+	color:#ef4345;
+}
+
+.header #tags{
+	display:none;
+	width: 200px;
+	margin-left: -50px;
+    background: #fff;
+    color:#000;
+}
+.header #tags li{
+	height: 38px;
+    line-height: 38px;
+}
+.header #tags li:hover{
+	color:#ef4345;
+}
+
+
+#masonry { 
+    	width: 100%;
+    	margin-top: 50px;
+    	position:relative;
+}
+.item { 
+		
+		z-index: 10;
+		transition: 0.25s;
+		overflow: hidden;
+	    position: absolute;
+}
+.item img{
+   		width:100%;
+   		height:100%;
+   		transition: 0.25s;
+}
+.item:hover img{
+   		z-index: 100;
+   		transition: 0.25s;
+   		overflow: hidden;
+   		animation: bounceIn 0.25s ease-in 2 alternate;
+}
+.item:hover .down{
+   		left:0;
+}
+
+.down{
+	    box-sizing: border-box;
+	    position: absolute;
+	    top: 0;
+	    height: 100%;
+	    background: rgba(0, 0, 0, .7);
+	    filter: alpha(opacity=70);
+	    font-size: 13px;
+	    padding: 10px;
+	    line-height: 22px;
+	    left:-130px;
+	    transition: all 0.25s ease;
+	    -webkit-transition: all 0.25s ease;
+	    -moz-transition: all 0.25s ease;
+	    -o-transition: all 0.25s ease;
+	    -ms-transition: all 0.25s ease;
+	    overflow-y: auto;
+
+}
+.down li{
+   		background: url(../images/down.png) no-repeat;
+  		background-position: 0 2px;
+  		padding-left: 23px;
+}
+.down li a{
+   		color:#fff;
+   		-webkit-transition: all 0.25s ease;
+	    -moz-transition: all 0.25s ease;
+	    -o-transition: all 0.25s ease;
+	    -ms-transition: all 0.25s ease;
+}
+.down li a:hover{
+		color: #ef4345;
+}
+
+.bigImg{
+	width:98%;
+	height:98%;
+}
+
+.loadmore{
+	height: 60px;
+    text-align: center;
+    line-height: 60px;
+    
+}
+
+@keyframes bounceIn{
+	100% {
+		transform: scale(1.07);
+	}
+}
