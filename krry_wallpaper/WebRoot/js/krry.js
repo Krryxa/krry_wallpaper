@@ -81,8 +81,9 @@ var krryimg = {
 				//否则是点击了一个按钮，重新加载
 				else $("#masonry").html(html);
 				
-				$(".lazy").lazyload({
+				$("img.lazy").lazyload({
 					effect:'fadeIn',
+					skip_invisible:false,
 					threshold: 200 // 提前开始加载
 				});
 				//执行瀑布流
@@ -133,8 +134,9 @@ $(".new360").click(function(){
 	//改变标题
 	changeTitle($(this).text());
 	krryimg.start = 0;
+	$("html,body").animate({scrollTop: 0}, 200);//滚动条置顶
 	krryimg.pics360(krryimg.start,krryimg.count,krryimg.cid);//加载360分类中的图片
-	$("body").animate({scrollTop: 0}, 200);//滚动条置顶
+	
 });
 
 
@@ -143,8 +145,9 @@ function loadTagData(cid){
 	//设置krryimg中的cid
 	krryimg.cid = cid;
 	krryimg.start = 0;
+	$("html,body").animate({scrollTop: 0}, 200);//滚动条置顶
 	krryimg.pics360(krryimg.start,krryimg.count,krryimg.cid);//加载360分类中的图片
-	$("body").animate({scrollTop: 0}, 200);//滚动条置顶
+	
 }
 
 
@@ -239,9 +242,9 @@ $(window).scroll(function(){
 	//清除定时器
 	clearTimeout(krryimg.timer);
 	//可视高度
-    var cheight = window.innerHeight;
+    var cheight = $(window).height();
     // 滚动条高度
-    var ctop = document.body.scrollTop;
+    var ctop = $(document).scrollTop();
 
    //文档的高度，到达底部
    	if(cheight+ctop+10 > document.body.scrollHeight){
