@@ -1,4 +1,4 @@
-# krry_wall
+# krry_wallpaper
 # 高清壁纸的api，壁纸下载
 
 ## 采用瀑布流展示壁纸
