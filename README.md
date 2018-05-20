@@ -42,6 +42,9 @@
 这个接口的参数是固定的，并且获取到的数据格式与上面一个接口一样。这里就不再描述了
 <br><br>
 
+- 用于下载图片的api： 
+> http://image.baidu.com/search/down?tn=download&word=download&ie=utf8&fr=detail&url=
+
 
 - 项目地址：https://www.ainyi.com/krry_wallpaper
 - My blog：https://www.ainyi.com
