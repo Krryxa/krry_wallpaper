@@ -27,8 +27,7 @@
 					分类
 					<ul id="tags"></ul>
 				</li>
-				<li class="h_r_no">待添加...</li>
-				<li class="h_r_no"><a href="https://www.ainyi.com" target="_blank">My blog</a></li>
+				<li class="h_r_no"><a href="https://ainyi.com" target="_blank">Krryblog</a></li>
 			</ul>
 		</div>
 		<!-- 放图片 -->

@@ -267,12 +267,21 @@ function getClient() {
     }
 }
 
+function debounceWaterFall(fn, delay) {
+	let timeout = null
+	return (() => {
+		if (timeout !== null) {
+			clearTimeout(timeout)
+		}
+		timeout = setTimeout(fn, delay)
+	})()
+}
 
 
  // 页面尺寸改变时实时触发
 window.onresize = function() {
 	//重新定义瀑布流
-	waterFall();
+	debounceWaterFall(waterFall, 300)
 };
 
 
